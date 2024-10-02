@@ -1,21 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <!--Boxicons CDN Link-->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="sidebar">
-        <div class="logo_content">
-            <div class="logo">
-                
-                <div class="logo_name">FShare</div>
-            </div>
+      <div class="logo_content">
+        <div class="logo">
+         <!--logo to be inserted here-->
+        <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAj5JREFUSEuNlj1oVEEQx39TiGAXYxcsAmIhEts0gRRnEhDSWKjNNXYS0EJJY2dnZQqxC/kgKMHS5nKFZRpBLSws0oSQTmIrgqN7u2933+y+F6/aS3b/s/P/mD3BfQTQySpbl388d1uAyAHdmQzXQ/RD+0uI1nfaGrFA/Ed14RE9qGm0Z7/b7E7W+HHXvAj6DrgDcqEFnVdKVz4BfQa4M5GVsoPYPovAx7x8SWZ+/cnOfeBeWcCghK8DYAx8AZkH/RULGK5EeaXwGGFDlCe5ij0U0RQ4AJaTwao9bSsyBB0K7DY6hTPl9cMFswKynDxTFgC+gdwAvQYcWeI6DCQDUEfRCFjJIrIB3MrKTAnMKXIGetl6zIvcr4GnKHn/EHS+1EPGiC5FeQJm1CCPmBE5FshDkOm8DQyBl8C6dZpJcqvBRoMxyFLKQRG0t8B94IHLQCQjdWAOpB2NBsZFLckE4QhlFrgKnNjYmqC1xBggjNGWyJcU2UH0iqdLphG9+c/7PxWmTOlJ00aDKkUjkJVA0XvgbhI8Qr4G1mpZKYMWh5q3qcBIfYHnwAuQz6BPgT/BgWeifG3P4NRLlSLjIpeFLYQ9lFNgDvhRhicNsdz6/TnwGhwDMwi/RVlQ+GRz05HUWKfIWujgNnAQ1o6BVZQP3WB5B2ltNGhNkcamzi2PQN8Uwzm0UglpnA6RovK1kuuIfkfZBB7WLNj9WFmR67OozYaNaAexsZtw4/JF61OsATXv8/kid/1K+B+gvLPKW/0XxPv9HcF+8hAAAAAASUVORK5CYII=" />
+          <div class="logo_name">FShare</div>
         </div>
+        <!--Menu-->
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path> -->
+            <i class='bx bx-menu' id="btn"></i>
+        </svg>
+      </div>
+      <!--The first Compoonent is here oft the list-->
+      <ul class="nav_list">
+        <li>
+        
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search">
+            
+            <!-- <span class="tooltip">Dashboard</span> -->
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-user'></i>
+                <span class="links_name">User</span>
+            </a>
+            <!-- <span class="tooltip">Dashboard</span> -->
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-chat'></i>
+                <span class="links_name">Message</span>
+            </a>
+            <!-- <span class="tooltip">Dashboard</span> -->
+        </li>
+        <li>
+            <a href="#">
+                <box-icon type='solid' name='pie-chart-alt-2'></box-icon>
+                <span class="links_name">Analytics</span>
+            </a>
+            <!-- <span class="tooltip">Dashboard</span> -->
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-folder'></i>
+                <span class="links_name">File Manager</span>
+            </a>
+            <!-- <span class="tooltip">Dashboard</span> -->
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-cart-alt'></i>
+                <span class="links_name">Order</span>
+            </a>
+            <!-- <span class="tooltip">Dashboard</span> -->
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-heart'></i>
+                <span class="links_name">Saved</span>
+            </a>
+            <!-- <span class="tooltip">Dashboard</span> -->
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-cog'></i>
+                <span class="links_name">Settings</span>
+            </a>
+            <!-- <span class="tooltip">Dashboard</span> -->
+        </li>
+      </ul>
+      <div class="profile_content">
+        <div class="profile">
+            <div class="profile_details">
+                <!--Here is the pic for the user inserted manually-->
+                <!-- <img src="user-regular-24.png" alt=""> -->
+                 <div class="name_job"></div>
+                 <div class="name">Eccky Don</div>
+                 <div class="job">Cyber Web Dev</div>
+            </div>  
+        </div>
+        <i class='bx bx-log-out'id="log_out"></i>
+      </div>
     </div>
-</body>
+  </body>
 </html>
