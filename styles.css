@@ -7,16 +7,17 @@
     box-sizing: border-box;
     font-family: "Poppins" , sans-serif;
 }
+
 body{
     position: relative;
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
-
 }
+
 .sidebar{
     height: 100%;
-    width: 78px;
+    /*width: 78px; 240px*/
     background: #11101d;
     padding: 6px 14px;
     position: fixed;
@@ -24,12 +25,8 @@ body{
     left: 0;
     transition: all 0.5s ease;
 }
-.sidebar .active{
-    width: 240px;
 
-}
-
-.sidebar .logo_content .logo{
+.sidebar .logo_content .logo {
     color: #fff;
     display: flex;
     height: 50px;
@@ -40,19 +37,17 @@ body{
     transition: all 0.5s ease;
 }
 
-.sidebar.active .logo_content .logo {
-    opacity: 1;
-    pointer-events: none;
-}
-.logo_content .logo i{
+.logo_content .logo i {
     font-size: 28px;
     margin-right: 5px;
 }
-.logo_content .logo .logo_name{
+
+.logo_content .logo .logo_name {
     font-size: 20px;
     font-weight: 400;
 }
-.sidebar #btn{
+
+.sidebar #btn {
     position: absolute;
     color: #fff;
     left: 50%;
@@ -65,14 +60,11 @@ body{
     transform: translateX(-50%);
 }
 
-.sidebar.active #btn{
-left: 90%;
-}
-.sidebar ul{
+.sidebar ul {
     margin-top: 20px;
 }
 
-.sidebar ul li{
+.sidebar ul li {
     position: relative;
     height: 50px;
     width: 100%;
@@ -81,6 +73,144 @@ left: 90%;
     line-height: 50px;
     border-radius: 12px;
 }
+
+/* this is the search bar space */
+.sidebar ul li input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #1d1b31;
+    padding-left: 50px;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* here is the search bar icon from boxicon */
+.sidebar ul li .bx-search {
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+
+.sidebar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.sidebar ul li a:hover {
+    color: #11101d;
+    background: #fff;
+}
+
+/* .sidebar ul li a i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px; 12px
+    text-align: center;
+} */
+
+.sidebar ul li i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    /* line-height: 50px; 12px*/
+    text-align: center;
+}
+
+.sidebar .profile_content {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar .profile_content .profile {
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: none;
+    transition: all 0.4s ease;
+}
+
+.profile_content .profile .profile_details {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* users image to be styled here */
+.profile .profile_details img {
+    height: 45px;
+    object-fit: cover;
+    width: 45px;
+    border-radius: 12px;
+}
+
+.profile .profile_details .name_job {
+    margin-left: 10px;
+}
+
+.profile .profile_details .name {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.profile .profile_details .job {
+    font-size: 12px;
+}
+
+.profile #log_out {
+    position: absolute;
+    left: 50px;
+    bottom: 5px;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+    background: #1d1b31;
+}
+
+
+
+
+
+
+
+
+
+
+.sidebar .active{
+    width: 240px;
+}
+
+.sidebar.active .logo_content .logo {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.sidebar.active #btn{
+left: 90%;
+}
+
 .sidebar ul li .tooltip{
     position: absolute;
     height: 35px;
@@ -106,53 +236,12 @@ top: 50%;
 transition: all 0.5s ease;
 opacity: 1;
 }
-/* this is the search bar space */
-.sidebar ul li input{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 12px;
-    outline: none;
-    border: none;
-    background: #1d1b31;
-    padding-left: 50px;
-    font-size: 18px;
-    color: #fff;
-}
-/* here is the search bar icon from boxicon */
-.sidebar ul li .bx-search{
-    position: absolute;
-    z-index: 99;
-    color: #fff;
-    font-size: 22px;
-    transition: all 0.5s ease;
-}
+
 .sidebar ul li .bx-search:hover{
 background: #fff;
 color: #1d1b31;
 }
-.sidebar ul li a{
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: all 0.4s ease;
-    border-radius: 12px;
-    white-space: nowrap;
-}
-.sidebar ul li a:hover{
-    color: #11101d;
-    background: #fff;
-}
-.sidebar ul li  i{
-    height: 50px;
-    min-width: 50px;
-    border-radius: 12px;
-    line-height: 50px;
-    text-align: center;
-}
+
 .sidebar .links_name {
     opacity: 0;
     pointer-events: none;
@@ -162,64 +251,18 @@ color: #1d1b31;
     opacity: 1;
     pointer-events: auto;
 }
-.sidebar .profile_content{
-    position: absolute;
-    color: #fff;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-.sidebar .profile_content .profile{
-    position: relative;
-    padding: 10px 6px;
-    height: 60px;
-    background: none;
-    transition: all 0.4s ease;
-}
+
+
 .sidebar.active .profile_content .profile{
     background: none;
 }
-.profile_content .profile .profile_details{
-display: flex;
-align-items: center;
-opacity: 0;
-pointer-events: none;
-white-space: nowrap;
-}
+
 .sidebar.active .profile .profile_details {
     opacity: 1;
     pointer-events: auto;
 }
-/* users image to be styled here */
-.profile .profile_details img{
-height: 45px;
-object-fit: cover;
-width: 45px;
-border-radius: 12px;
-}
-.profile .profile_details .name_job{
-    margin-left: 10px;
-}
-.profile .profile_details .name{
-    font-size: 15px;
-    font-weight: 400;
-}
-.profile .profile_details .job{
-    font-size: 12px;
-}
-.profile #log_out{
-    position: absolute;
-    left: 50px;
-    bottom: 5px;
-    transform: translateX(-50%);
-    min-width: 50px;
-    line-height: 50px;
-    font-size: 20px;
-    border-radius: 12px;
-    text-align: center;
-    transition: all 0.4s ease;
-    background: #1d1b31;
-}
+
+
 .sidebar.active .profile #log_out{
 left: 88%;
 }
